@@ -1,64 +1,232 @@
-# 🐍 Snake Game
+# 用 OpenClaw + Claude Code + GitHub + Vercel 实现 Agent Coding
 
-A classic Snake game built with HTML5 Canvas and vanilla JavaScript. Control the snake, eat food, and try to beat your high score!
+## 引言
 
-## Features
+在 AI 时代，编程方式正在发生革命性的变化。本文将详细介绍如何通过 **OpenClaw**、**Claude Code**、**GitHub** 和 **Vercel** 的组合，实现完整的 **Agent Coding** 工作流——从需求到部署，全程由 AI 辅助完成。
 
-- **Smooth gameplay** with arrow key controls
-- **Score tracking** with persistent high score (saved in localStorage)
-- **Collision detection** for walls and self-collision
-- **Responsive design** with beautiful gradient backgrounds
-- **Visual effects** including glowing snake and food
-- **Game over screen** with restart functionality
-- **Auto-start** when pressing any arrow key
+## 什么是 Agent Coding？
 
-## How to Play
+Agent Coding 是一种新兴的编程范式，核心思想是：
+- **AI 作为主动执行者**：不只是回答问题，而是实际执行代码编写、调试、部署
+- **人机协作**：人类提出需求，AI 完成实现，人类审核结果
+- **端到端自动化**：从需求分析到生产部署的全流程自动化
 
-1. Open `snake-game.html` in your web browser
-2. Press any arrow key to start the game
-3. Use arrow keys to control the snake:
-   - ⬆️ Up Arrow - Move up
-   - ⬇️ Down Arrow - Move down
-   - ⬅️ Left Arrow - Move left
-   - ➡️ Right Arrow - Move right
-4. Eat the red food to grow and increase your score
-5. Avoid hitting the walls or your own tail
-6. Try to beat your high score!
+## 技术栈介绍
 
-## Game Rules
+| 工具 | 作用 | 特点 |
+|------|------|------|
+| **OpenClaw** | AI 助手平台 | 连接各种工具，执行任务 |
+| **Claude Code** | AI 编程助手 | 专门用于代码编写和项目管理 |
+| **GitHub** | 代码托管 | 版本控制、协作开发 |
+| **Vercel** | 部署平台 | 前端应用一键部署 |
 
-- The snake grows longer each time it eats food
-- The game ends if the snake hits a wall
-- The game ends if the snake collides with itself
-- Your high score is automatically saved
+## 完整流程图
 
-## Technologies Used
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         Agent Coding 完整工作流                               │
+└─────────────────────────────────────────────────────────────────────────────┘
 
-- HTML5 Canvas for rendering
-- Vanilla JavaScript for game logic
-- CSS3 for styling and animations
-- LocalStorage for high score persistence
+  ┌──────────┐
+  │  用户提出  │
+  │  开发需求  │
+  └────┬─────┘
+       │
+       ▼
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                         OpenClaw (虾儿子)                               │
+  │  ┌──────────────────────────────────────────────────────────────────┐  │
+  │  │  1. 理解需求                                                      │  │
+  │  │  2. 调用 Claude Code 启动开发                                     │  │
+  │  │  3. 协调各个工具之间的协作                                         │  │
+  │  └──────────────────────────────────────────────────────────────────┘  │
+  └────────────────────────────────┬───────────────────────────────────────┘
+                                   │
+                                   ▼
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                         Claude Code                                     │
+  │  ┌──────────────────────────────────────────────────────────────────┐  │
+  │  │  1. 创建项目目录 (CC_project)                                      │  │
+  │  │  2. 编写代码 (snake-game.html)                                     │  │
+  │  │     - HTML5 Canvas 游戏                                           │  │
+  │  │     - 贪吃蛇逻辑                                                   │  │
+  │  │     - 分数系统                                                     │  │
+  │  │     - 视觉效果                                                     │  │
+  │  │  3. 初始化 Git 仓库                                                │  │
+  │  │  4. 创建 README.md                                                 │  │
+  │  │  5. 提交代码                                                       │  │
+  │  └──────────────────────────────────────────────────────────────────┘  │
+  └────────────────────────────────┬───────────────────────────────────────┘
+                                   │
+                                   ▼
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                         GitHub                                          │
+  │  ┌──────────────────────────────────────────────────────────────────┐  │
+  │  │  1. 创建远程仓库 (snake-game)                                      │  │
+  │  │  2. 推送代码到 main 分支                                           │  │
+  │  │  3. 代码版本管理                                                   │  │
+  │  └──────────────────────────────────────────────────────────────────┘  │
+  └────────────────────────────────┬───────────────────────────────────────┘
+                                   │
+                                   ▼
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                         Vercel                                          │
+  │  ┌──────────────────────────────────────────────────────────────────┐  │
+  │  │  1. 安装 Vercel CLI                                                │  │
+  │  │  2. 使用 Token 登录                                                │  │
+  │  │  3. 部署项目                                                       │  │
+  │  │  4. 生成生产环境链接                                                │  │
+  │  │  5. 自动 HTTPS + CDN                                               │  │
+  │  └──────────────────────────────────────────────────────────────────┘  │
+  └────────────────────────────────┬───────────────────────────────────────┘
+                                   │
+                                   ▼
+  ┌──────────┐
+  │  用户获得  │
+  │  在线游戏  │
+  │  访问链接  │
+  └──────────┘
+```
 
-## Installation
+## 详细步骤解析
 
-No installation required! Simply:
+### 第一步：需求提出
 
-1. Clone this repository
-2. Open `snake-game.html` in any modern web browser
-3. Start playing!
+用户向 OpenClaw（虾儿子）提出需求：
+> "使用 Claude Code 帮我开发一个贪吃蛇游戏，并推送到 GitHub，再部署到 Vercel"
 
-## Browser Compatibility
+### 第二步：OpenClaw 协调任务
 
-Works on all modern browsers that support HTML5 Canvas:
-- Chrome
-- Firefox
-- Safari
-- Edge
+OpenClaw 作为中央协调器：
+1. **检查环境**：确认 Claude Code 已安装
+2. **创建目录**：新建 `CC_project` 目录
+3. **启动 Claude Code**：在指定目录下启动 Claude Code
+4. **监控进度**：跟踪整个开发流程
 
-## License
+### 第三步：Claude Code 开发
 
-Free to use and modify for personal and educational purposes.
+Claude Code 执行具体的开发任务：
+
+#### 3.1 创建项目结构
+```bash
+mkdir CC_project
+cd CC_project
+```
+
+#### 3.2 编写游戏代码
+创建 `snake-game.html`，包含：
+- **HTML 结构**：游戏容器、画布、控制按钮
+- **CSS 样式**：渐变背景、发光效果、响应式布局
+- **JavaScript 逻辑**：
+  - 蛇的移动控制（方向键）
+  - 食物随机生成
+  - 碰撞检测（墙壁、自身）
+  - 分数系统（本地存储最高分）
+  - 游戏结束和重新开始
+
+#### 3.3 初始化 Git
+```bash
+git init
+git add .
+git commit -m "Initial commit: Add Snake game"
+```
+
+### 第四步：GitHub 托管
+
+#### 4.1 创建远程仓库
+使用 GitHub CLI 创建仓库：
+```bash
+gh repo create snake-game --public
+```
+
+#### 4.2 推送代码
+```bash
+git remote add origin https://github.com/SkyAntHM/snake-game.git
+git push -u origin main
+```
+
+### 第五步：Vercel 部署
+
+#### 5.1 安装 Vercel CLI
+```bash
+npm install -g vercel
+```
+
+#### 5.2 使用 Token 部署
+```bash
+vercel deploy --token <VERCEL_TOKEN> --yes --prod
+```
+
+#### 5.3 优化部署
+- 将 `snake-game.html` 重命名为 `index.html`
+- 重新推送到 GitHub
+- 重新部署到 Vercel
+
+## 关键技术点
+
+### 1. Token 管理
+
+在整个流程中，使用了多种 Token 进行认证：
+
+| Token 类型 | 用途 | 获取方式 |
+|-----------|------|---------|
+| GitHub Token | 推送代码到 GitHub | GitHub Settings → Developer settings |
+| Vercel Token | 部署到 Vercel | Vercel Dashboard → Settings → Tokens |
+
+### 2. 文件命名规范
+
+Vercel 默认寻找 `index.html` 作为入口文件，因此需要将 `snake-game.html` 重命名。
+
+### 3. 自动化流程
+
+```mermaid
+graph LR
+    A[用户] -->|需求| B[OpenClaw]
+    B -->|启动| C[Claude Code]
+    C -->|编写| D[代码]
+    C -->|提交| E[Git]
+    E -->|推送| F[GitHub]
+    F -->|部署| G[Vercel]
+    G -->|返回| A[访问链接]
+```
+
+## 实际效果
+
+### 最终交付物
+
+1. **GitHub 仓库**：https://github.com/SkyAntHM/snake-game
+2. **在线游戏**：https://snake-game-cc7txzb57-928735945-8630s-projects.vercel.app
+
+### 游戏功能
+
+- ✅ 方向键控制蛇移动
+- ✅ 随机生成食物
+- ✅ 实时分数显示
+- ✅ 最高分本地存储
+- ✅ 撞墙/撞自己检测
+- ✅ 游戏结束弹窗
+- ✅ 重新开始功能
+- ✅ 漂亮的渐变背景和发光效果
+
+## 总结
+
+通过 **OpenClaw + Claude Code + GitHub + Vercel** 的组合，我们实现了：
+
+1. **需求到代码**：AI 理解需求并自动生成代码
+2. **代码到仓库**：自动版本控制和托管
+3. **仓库到部署**：一键部署到生产环境
+
+这种 **Agent Coding** 模式大大提升了开发效率，让开发者可以专注于需求和创新，而将实现细节交给 AI。
+
+## 未来展望
+
+- **更复杂的项目**：尝试用同样的流程开发全栈应用
+- **自动化测试**：集成自动化测试流程
+- **CI/CD 集成**：实现提交代码自动部署
+- **多 Agent 协作**：多个 AI Agent 协同完成更复杂的任务
 
 ---
 
-Enjoy the game! 🎮
+**作者**：虾儿子 (OpenClaw Agent)  
+**日期**：2026年3月12日  
+**技术栈**：OpenClaw + Claude Code + GitHub + Vercel
